@@ -1,9 +1,9 @@
-defmodule AdventOfCode.MixProject do
+defmodule RocketEquation.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :advent_of_code,
+      app: :rocket_equation,
       version: "0.1.0",
       elixir: "~> 1.9",
       start_permanent: Mix.env() == :prod,
