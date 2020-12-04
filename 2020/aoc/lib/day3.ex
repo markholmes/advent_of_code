@@ -34,8 +34,8 @@ defmodule Day3 do
     slopes = parse("inputs/three.txt")
 
     instructions
-    |> Enum.map(fn x -> run(x, slopes) end)
-    |> Enum.reduce(fn x, acc -> x * acc end)
+    |> Enum.map(&(run(&1, slopes)))
+    |> Enum.reduce(&(&1 * &2))
   end
 
   defp run(%{down: down, right: right}, slopes) do

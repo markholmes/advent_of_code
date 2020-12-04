@@ -14,7 +14,7 @@ defmodule Day2 do
   def one do
     File.read!("inputs/two.txt")
     |> String.split("\n")
-    |> Enum.map(fn x -> parse(x) end)
+    |> Enum.map(&parse/1)
     |> Enum.filter(&is_password_valid_one?/1)
     |> Enum.count()
   end
@@ -30,7 +30,7 @@ defmodule Day2 do
   def two do
     File.read!("inputs/two.txt")
     |> String.split("\n")
-    |> Enum.map(fn x -> parse(x) end)
+    |> Enum.map(&parse/1)
     |> Enum.filter(&is_password_valid_two?/1)
     |> Enum.count()
   end
