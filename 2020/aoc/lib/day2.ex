@@ -24,7 +24,7 @@ defmodule Day2 do
       password
       |> Enum.frequencies()
 
-    frequency[letter] >= min && frequency[letter] <= max
+    frequency[letter] in min..max
   end
 
   def two do
